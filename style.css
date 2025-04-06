@@ -1,0 +1,109 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    background: #e5ddd5;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  #chat-wrapper {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #chat-window {
+    background: #fff;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90vh;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 1rem;
+    position: relative;
+  }
+  .chat-bubble {
+    max-width: 80%;
+    padding: 0.7rem 1rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    animation: fadeIn 0.5s ease;
+  }
+  .chat-bubble.left {
+    background-color: #dcf8c6;
+    align-self: flex-start;
+  }
+  .chat-bubble.right {
+    background-color: #ffffff;
+    align-self: flex-end;
+    border: 1px solid #ccc;
+  }
+  .chat-bubble.center {
+    background-color: #e1ffc7;
+    align-self: center;
+    text-align: center;
+  }
+  .ria {
+    animation: riaSlide 0.5s ease forwards;
+  }
+  .varun {
+    animation: varunSlide 0.5s ease forwards;
+  }
+  @keyframes riaSlide {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes varunSlide {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  button {
+    margin-top: 1rem;
+    padding: 0.4rem 1rem;
+    background-color: #25d366;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #128c7e;
+  }
+  .hidden {
+    display: none;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #confetti-container {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
